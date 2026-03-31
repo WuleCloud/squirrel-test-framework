@@ -1,0 +1,2 @@
+[console_scripts]
+squirral = squirral.cli:main

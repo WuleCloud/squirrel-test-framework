@@ -1,0 +1,31 @@
+{
+  "generator": "squirral.synthetic.v1",
+  "output_path": "examples/tvla_test_weak.zarr",
+  "format": "zarr",
+  "schema": "both",
+  "profile": "weak",
+  "seed": 7,
+  "num_traces_per_group": 1000,
+  "num_samples_per_trace": 2000,
+  "leakage_window": [
+    400,
+    700
+  ],
+  "leakage_shape": "step",
+  "leakage_amplitude": 0.6,
+  "noise_std": 1.0,
+  "jitter": 0,
+  "fixed_offset": 0.0,
+  "random_offset": 0.0,
+  "ground_truth": {
+    "has_leakage": true,
+    "target_group": "fixed",
+    "target_metric": "mean_shift"
+  },
+  "zarr_arrays": {
+    "fixed_traces": true,
+    "random_traces": true,
+    "traces": true,
+    "labels": true
+  }
+}
