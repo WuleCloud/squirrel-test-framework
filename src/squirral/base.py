@@ -101,7 +101,7 @@ class Analyzer:
         Returns:
             TraceDataset
         """
-        from squirral.io.loaders import load_trace_groups
+        from squirral.data_io.loaders import load_trace_groups
 
         fixed, random = load_trace_groups(path, format)
         return TraceDataset(fixed_traces=fixed, random_traces=random)
@@ -122,7 +122,7 @@ class Analyzer:
         Returns:
             Output path
         """
-        from squirral.io.datasets import save_synthetic_zarr
+        from squirral.data_io.datasets import save_synthetic_zarr
 
         if format == "zarr":
             return save_synthetic_zarr(

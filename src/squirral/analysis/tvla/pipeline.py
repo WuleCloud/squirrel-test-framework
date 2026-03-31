@@ -7,7 +7,7 @@ from dataclasses import dataclass
 import numpy as np
 
 from squirral.analysis.tvla.tvla_core import TVLAAnalysisResult, TVLAAnalyzer, TVLAConfig
-from squirral.io.loaders import load_trace_groups
+from squirral.data_io.loaders import load_trace_groups
 
 
 @dataclass(slots=True)
