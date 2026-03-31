@@ -6,7 +6,7 @@ export LEAKAGE_END=900
 OUTPUT_DIR="${OUTPUT_DIR:-./examples}"
 PROFILE="${PROFILE:-medium}"
 
-python3 scripts/generate_tvla_dataset.py \
+python3 test-data-generator/generate_tvla_dataset.py \
   --output "$OUTPUT_DIR/tvla_test_medium.zarr" \
   --profile "$PROFILE"
 
@@ -19,7 +19,7 @@ squirral tvla run \
 PYTHONPATH=./src python3 -c "
 from squirral.analysis.tvla import analyze_convergence, TVLAConfig
 from squirral.plot import plot_convergence
-from squirral.io.loaders import load_zarr
+from squirral.data_io.loaders import load_zarr
 
 fixed, random = load_zarr('$OUTPUT_DIR/tvla_test_medium.zarr')
 result = analyze_convergence(fixed, random, max_trace_counts=1000, num_steps=20, seed=42)

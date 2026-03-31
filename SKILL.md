@@ -46,7 +46,7 @@ squirrel-auto-testbench/
 ├── SKILL.md                      # 主 skill
 ├── squirrel-skills/
 │   └── squirrel-dataset-prepare/ # 测试数据准备 (子skill)
-├── scripts/
+├── test-data-generator/
 │   └── generate_tvla_dataset.py  # TVLA 数据生成脚本
 ├── tvla-test/                    # TVLA 测试脚本
 │   ├── run_tvla_weak.sh
@@ -68,7 +68,7 @@ squirrel-auto-testbench/
 ./tvla-test/run_tvla_medium.sh
 
 # 或手动生成
-python3 scripts/generate_tvla_dataset.py \
+python3 test-data-generator/generate_tvla_dataset.py \
   --output ./examples/tvla_test.zarr \
   --profile medium
 

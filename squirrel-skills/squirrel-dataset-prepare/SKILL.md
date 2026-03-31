@@ -20,7 +20,7 @@ description: >
 
 当用户请求 TVLA 测试数据时：
 
-1. 使用 `scripts/generate_tvla_dataset.py` 生成数据
+1. 使用 `test-data-generator/generate_tvla_dataset.py` 生成数据
 2. 默认输出格式为 **Zarr** (`.zarr`)
 3. 支持三种泄漏强度预设：
 
@@ -61,17 +61,17 @@ dataset.zarr/
 
 ```bash
 # 弱泄漏
-python3 scripts/generate_tvla_dataset.py \
+python3 test-data-generator/generate_tvla_dataset.py \
   --output ./examples/tvla_weak.zarr \
   --profile weak
 
 # 中等泄漏 (默认)
-python3 scripts/generate_tvla_dataset.py \
+python3 test-data-generator/generate_tvla_dataset.py \
   --output ./examples/tvla_medium.zarr \
   --profile medium
 
 # 强泄漏
-python3 scripts/generate_tvla_dataset.py \
+python3 test-data-generator/generate_tvla_dataset.py \
   --output ./examples/tvla_strong.zarr \
   --profile strong
 ```
@@ -84,13 +84,13 @@ export NUM_SAMPLES=3000
 export LEAKAGE_START=500
 export LEAKAGE_END=900
 
-python3 scripts/generate_tvla_dataset.py --output ./examples/tvla_custom.zarr --profile medium
+python3 test-data-generator/generate_tvla_dataset.py --output ./examples/tvla_custom.zarr --profile medium
 ```
 
 ### 自定义参数
 
 ```bash
-python3 scripts/generate_tvla_dataset.py \
+python3 test-data-generator/generate_tvla_dataset.py \
   --output ./examples/tvla_custom.zarr \
   --profile medium \
   --num-traces 5000 \
