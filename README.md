@@ -27,3 +27,18 @@ squirrel-test-framework/
 ├── tests/                          # Test cases and validation logic
 ├── tvla-test/                      # TVLA-specific workflows and experiments
 └── SKILL.md                        # Skill entry / usage document
+```
+
+## Skill Entry
+
+The skill `squirrel-dataset-prepare` is used as an entry point for generating TVLA-related test scripts.
+
+Its purpose is to:
+- prepare dataset-driven test cases
+- generate runnable shell scripts
+- standardize the structure of TVLA experiments
+- simplify repeated testing across multiple leakage conditions
+
+- 
+## Future Updates
+This framework is still evolving, and additional testing functions will be integrated incrementally in future updates.
